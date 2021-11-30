@@ -1,6 +1,6 @@
 import Nav from "../components/Nav/Nav";
 import ContextProvider from "../context/context";
-import "../styles/globals.css";
+import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
     return (
