@@ -1,7 +1,7 @@
 import React from "react";
 import SingleLink from "./SingleLink";
 
-const NavLinks = ({ list, click, children }) => {
+const NavLinks = ({ list, click, children, setClick }) => {
     return (
         <div
             className={`${
@@ -10,7 +10,13 @@ const NavLinks = ({ list, click, children }) => {
         >
             <ul>
                 {list.map(item => {
-                    return <SingleLink key={item.id} {...item} />;
+                    return (
+                        <SingleLink
+                            key={item.id}
+                            {...item}
+                            setClick={setClick}
+                        />
+                    );
                 })}
             </ul>
             {children}

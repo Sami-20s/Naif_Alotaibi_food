@@ -16,7 +16,7 @@ const Nav = () => {
                         <img src="/Logo.png" alt="foody photo" />
                     </Link>
                 </div>
-                <NavLinks list={NavList} click={isClick}>
+                <NavLinks list={NavList} click={isClick} setClick={setIsClick}>
                     <SoicalIcons />
                 </NavLinks>
                 <Burger click={isClick} setClick={setIsClick} />
