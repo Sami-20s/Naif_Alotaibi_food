@@ -14,8 +14,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        &__logo {
+            // Large Screen
+            @include breakpoint-up("large") {
+                cursor: pointer;
+            }
+        }
         &__links {
             display: none;
+            // Large Screen
             @include breakpoint-up("large") {
                 display: flex;
                 align-items: center;
@@ -23,13 +30,26 @@
             ul {
                 display: flex;
                 li {
+                    position: relative;
                     color: #fff;
                     margin-right: 30px;
                     transition: var(--tra);
                     &:hover {
                         color: var(--dark-green);
                     }
+                    // Large Screen
                     @include breakpoint-up("large") {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            width: 14px;
+                            height: 2px;
+                            display: block;
+                            background-color: #fff;
+                            right: -22px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
                         cursor: pointer;
                     }
                 }
