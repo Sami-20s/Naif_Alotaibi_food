@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     &__wrapper {
+        z-index: 100;
         transform: translateY(-60px);
         display: flex;
         flex-direction: column;
