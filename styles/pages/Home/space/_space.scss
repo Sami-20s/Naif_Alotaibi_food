@@ -16,9 +16,6 @@
     }
     &__wrapper {
         text-align: center;
-        &:hover h2 {
-            color: var(--dark-green);
-        }
         > h2 {
             color: #fff;
             font-size: 30px;
