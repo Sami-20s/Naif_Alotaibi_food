@@ -74,7 +74,10 @@
             @include breakpoint-up("large") {
                 margin-top: 30px;
             }
-            > button {
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 background-color: rgb(39, 54, 74);
                 border: none;
                 width: 123px;
