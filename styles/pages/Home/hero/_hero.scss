@@ -1,0 +1,64 @@
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh);
+    text-align: center;
+    background-image: url("/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include breakpoint-up("large") {
+        background-size: 100%;
+    }
+    &__wrapper {
+        &__text {
+            h1 {
+                color: #fff;
+                font-size: 3rem;
+                font-family: "Lobster Two";
+                @include breakpoint-up("meduim") {
+                    font-size: 4rem;
+                }
+                @include breakpoint-up("large") {
+                    font-size: 5.3125rem;
+                }
+            }
+            p {
+                font-family: "Montserrat", sans-serif;
+                color: #fff;
+                font-size: 1.25rem;
+                margin: auto;
+                max-width: 270px;
+                line-height: 1.5;
+
+                &.dots {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+        &__buttons {
+            margin-top: 40px;
+            > button {
+                background-color: var(--very-dark-blue);
+                width: 171px;
+                height: 45px;
+                color: #fff;
+                border: none;
+                outline: none;
+                font-weight: 500;
+                font-size: 1rem;
+                transition: var(--tra);
+                &:hover {
+                    color: var(--dark-green);
+                }
+                @include breakpoint-up("large") {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
