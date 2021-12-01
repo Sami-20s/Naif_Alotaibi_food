@@ -1,0 +1,92 @@
+.story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__wrapper {
+        transform: translateY(-60px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 728px;
+        height: 550px;
+        background-color: #fff;
+        // Tablet Screen
+        @include breakpoint-up("meduim") {
+            width: 500px;
+        }
+        // Large Screen
+        @include breakpoint-up("large") {
+            flex-direction: row;
+            width: 728px;
+            height: 338px;
+        }
+        &__img {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 60%;
+            background-image: url("/story.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            // Large Screen
+            @include breakpoint-up("large") {
+                width: 50%;
+                height: 100%;
+            }
+        }
+        &__TB__container {
+            padding: 15px 0;
+            text-align: center;
+            width: 100%;
+            height: 50%;
+            @include breakpoint-up("large") {
+                text-align: left;
+                padding: 50px 0 0 40px;
+                width: 50%;
+                height: 100%;
+            }
+        }
+        &__text {
+            > h2 {
+                font-family: var(--lobster);
+                font-weight: 400;
+                font-size: 2.1875rem;
+                color: var(--regular-blue);
+            }
+
+            .story__wrapper__text__dots {
+                color: var(--dark-gray);
+                font-size: 1.375rem;
+                @include breakpoint-up("large") {
+                    font-size: 1.75rem;
+                }
+            }
+            p {
+                color: var(--gray);
+                line-height: 1.642;
+                font-size: 0.9375rem;
+            }
+        }
+        &__buttons {
+            margin-top: 20px;
+            @include breakpoint-up("large") {
+                margin-top: 30px;
+            }
+            > button {
+                background-color: rgb(39, 54, 74);
+                border: none;
+                width: 123px;
+                height: 30px;
+                color: #fff;
+                transition: var(--tra);
+                &:hover {
+                    color: var(--dark-green);
+                }
+                @include breakpoint-up("large") {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
