@@ -1,0 +1,29 @@
+@import "../../helper/mixins/mixins";
+.footer {
+    background-color: var(--footer-blue);
+    color: #fff;
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 0;
+        > div > h3 {
+            font-size: 1.5625rem;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        div > p {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        .locations__info,
+        .hours__info {
+            display: flex;
+            div {
+                &:not(:last-child) {
+                    margin-right: 50px;
+                }
+            }
+        }
+    }
+}
