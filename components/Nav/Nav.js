@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useGlobal } from "../../context/context";
 import Burger from "./Burger";
 import NavLinks from "./NavLinks";
@@ -8,6 +8,11 @@ import SoicalIcons from "./SoicalIcons";
 const Nav = () => {
     const { NavList } = useGlobal();
     const [isClick, setIsClick] = useState(false);
+    useEffect(() => {
+        isClick
+            ? (document.body.style.overflowY = "hidden")
+            : (document.body.style.overflowY = "scroll");
+    });
     return (
         <nav className="nav" id="nav">
             <div className="nav__wrapper container-px">
