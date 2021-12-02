@@ -32,11 +32,10 @@
             }
             &__single {
                 position: relative;
+                display: block;
+                cursor: pointer;
                 &:hover &__hover {
                     opacity: 1;
-                }
-                @include breakpoint-up("large") {
-                    cursor: pointer;
                 }
                 > img {
                     width: 300px;
