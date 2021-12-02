@@ -1,0 +1,30 @@
+@import "../../helper/mixins/mixins";
+.toTopButton {
+    z-index: 10000;
+    display: block;
+    position: fixed;
+    right: -50px;
+    bottom: 30px;
+    transition: var(--tra);
+    > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        background-color: var(--very-dark-blue);
+        border: none;
+        font-size: 30px;
+        color: #fff;
+        transition: var(--tra);
+        &:hover {
+            color: var(--dark-green);
+        }
+        @include breakpoint-up("large") {
+            cursor: pointer;
+        }
+    }
+    &.active {
+        right: 30px;
+    }
+}
