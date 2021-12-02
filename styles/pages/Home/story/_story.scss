@@ -84,11 +84,14 @@
                 height: 30px;
                 color: #fff;
                 transition: var(--tra);
+                margin: auto;
                 &:hover {
                     color: var(--dark-green);
                 }
+                // Large Screen
                 @include breakpoint-up("large") {
                     cursor: pointer;
+                    margin: unset;
                 }
             }
         }
