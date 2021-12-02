@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { NavList } from "./NavList/NavList";
+import { MenuList } from "./MenuList/MenuList";
 
 const ContextApp = React.createContext();
 const ContextProvider = ({ children }) => {
@@ -7,6 +8,7 @@ const ContextProvider = ({ children }) => {
         <ContextApp.Provider
             value={{
                 NavList,
+                MenuList,
             }}
         >
             {children}
