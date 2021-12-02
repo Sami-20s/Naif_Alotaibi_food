@@ -18,10 +18,15 @@
         text-align: center;
         > h2 {
             color: #fff;
-            font-size: 25px;
+            font-size: 1.25rem;
             font-weight: 500;
             @include breakpoint-up("meduim") {
                 font-size: 1.875rem;
+            }
+            // Large Screen
+            @include breakpoint-up("large") {
+                padding: 5px;
+                background-color: rgba(40, 55, 75, 0.6);
             }
         }
     }
